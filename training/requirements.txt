@@ -1,0 +1,18 @@
+# Training-only dependencies for slice S3 (text classifier).
+# The submitted seller never imports these: negotiator/textsignals.py runs on the
+# standard library, plus onnxruntime when it happens to be installed (plan D5).
+#
+# Install into a separate virtual environment, e.g.
+#   python -m venv C:\Users\Asus\.venvs\ps2-train
+#   C:\Users\Asus\.venvs\ps2-train\Scripts\python -m pip install -r training/requirements.txt
+#
+# On Windows the PyPI torch wheel is CPU-only, which is all SetFit on MiniLM needs.
+torch>=2.3
+transformers>=4.41
+sentence-transformers>=3.0
+setfit>=1.1
+datasets>=2.19
+scikit-learn>=1.4
+numpy>=1.26
+onnx>=1.16
+onnxruntime>=1.18

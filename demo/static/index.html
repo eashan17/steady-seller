@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steady Seller</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo">🤝</span> Steady</div>
+  <nav class="nav">
+    <a data-go="llm-take-it-or-leave-it">Replay</a>
+    <a data-go="try-to-break-it">Try to break it</a>
+    <a data-go="same-buyer-two-sellers">Side by side</a>
+    <a data-go="how-we-got-here">Evidence</a>
+  </nav>
+  <div class="actions"><span class="btn" id="modeBtn">Seller V11 · no LLM</span><button class="btn dark" data-go="try-to-break-it">Play the buyer</button></div>
+</header>
+
+<section class="steps" id="steps">
+  <div class="step" data-step="1"><div class="n">1</div><div><h4>Read the buyer</h4><p>A small trained classifier tags intent, claims and attacks in every message.</p></div></div>
+  <div class="step" data-step="2"><div class="n">2</div><div><h4>Update the belief</h4><p>A Bayesian grid narrows the buyer's hidden limit and deadline with every bid.</p></div></div>
+  <div class="step" data-step="3"><div class="n">3</div><div><h4>Decide, then guard</h4><p>An expected-value planner picks the price. A guard checks every word before it is sent.</p></div></div>
+</section>
+
+<section class="window">
+  <div class="chrome"><i></i><i></i><i></i><div class="url" id="url">127.0.0.1:8765/#llm-take-it-or-leave-it</div></div>
+  <div class="cols">
+    <aside class="side">
+      <div class="brand"><span class="logo">🤝</span> Steady</div>
+      <h5>Replays</h5>
+      <div class="chan" data-go="llm-take-it-or-leave-it"><b>#</b>llm-take-it-or-leave-it</div>
+      <div class="chan" data-go="llm-fake-approvals"><b>#</b>llm-fake-approvals</div>
+      <div class="chan" data-go="llm-final-offer"><b>#</b>llm-final-offer</div>
+      <h5 style="margin-top:14px">Compare</h5>
+      <div class="chan" data-go="same-buyer-two-sellers"><b>#</b>same-buyer-two-sellers</div>
+      <div class="chan" data-go="no-deal-possible"><b>#</b>no-deal-possible</div>
+      <h5 style="margin-top:14px">Live</h5>
+      <div class="chan" data-go="try-to-break-it"><b>#</b>try-to-break-it</div>
+      <div class="chan" data-go="how-we-got-here"><b>#</b>how-we-got-here</div>
+      <div class="foot">Real negotiations, real seller. Nothing here is mocked: replays feed the recorded buyer messages to the submitted seller.</div>
+    </aside>
+    <main class="main" id="main"></main>
+    <aside class="panel" id="panel"></aside>
+  </div>
+</section>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

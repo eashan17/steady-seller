@@ -1,0 +1,79 @@
+{
+ "timeline": [
+  {
+   "v": "V0",
+   "what": "Hardened rule seller.",
+   "why": "Fixed the starter seller's crash; a guard checks every message. Kit score 51.2."
+  },
+  {
+   "v": "V1",
+   "what": "Bayesian buyer belief + expected-value planner.",
+   "why": "Every rule suite improved; deadlocks fell 80–100%."
+  },
+  {
+   "v": "V2·V3",
+   "what": "Keyword tags vs a trained classifier.",
+   "why": "The kit bots ignore text, so we built LLM-played buyers to test reading."
+  },
+  {
+   "v": "V4·V5",
+   "what": "Hybrid reading + a price floor.",
+   "why": "On real LLM messages, keywords read intent better (F1 0.56 vs 0.47); the LLM test showed underpricing."
+  },
+  {
+   "v": "Audit",
+   "what": "Loss breakdown against the best achievable play.",
+   "why": "Losses: accepting bids below the buyer's limit, and underpricing late concessors."
+  },
+  {
+   "v": "V6",
+   "cls": "rej",
+   "what": "Patched acceptance directly.",
+   "why": "Rejected: the losses just moved. Lesson: fix how buyers are identified."
+  },
+  {
+   "v": "V7–V9",
+   "what": "Buyer-identification fixes.",
+   "why": "Limit-estimate bias from as much as −38% of list to about ±3%."
+  },
+  {
+   "v": "V10",
+   "cls": "rej",
+   "what": "Endgame and information-seeking variants.",
+   "why": "None passed the rule; the remaining gap is what bids can reveal."
+  },
+  {
+   "v": "V11",
+   "cls": "fin",
+   "what": "Offers never rise.",
+   "why": "A rounding bug could raise our price mid-negotiation. Fixed and submitted."
+  }
+ ],
+ "cards": [
+  {
+   "k": "Kit default run (210 negotiations)",
+   "v": "51.4",
+   "s": "baseline 48.5"
+  },
+  {
+   "k": "Violations · deadlocks",
+   "v": "0 · 0",
+   "s": "policy, truth"
+  },
+  {
+   "k": "Limit-estimate bias",
+   "v": "±3%",
+   "s": "was up to −38%"
+  },
+  {
+   "k": "Own LLM buyers (Groq gpt-oss-120b)",
+   "v": "0 violations",
+   "s": "V11 = V9 over 24 games"
+  },
+  {
+   "k": "Cost",
+   "v": "≈10 ms",
+   "s": "per turn · no API calls"
+  }
+ ]
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Steady demo video</title>
+<link rel="stylesheet" href="app.css">
+<style>
+  html, body { width: 1920px; height: 1080px; overflow: hidden; }
+  body { font-size: 15.5px; background-attachment: scroll; }
+  #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; }
+  .vtop { position: absolute; left: 0; right: 0; top: 0; height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 64px; }
+  .vtop .brand { font-size: 22px; }
+  .vtop .tid { font-family: var(--mono); font-size: 13px; color: var(--muted); }
+  .head { position: absolute; left: 0; right: 0; top: 74px; text-align: center; }
+  .kicker { font-family: var(--mono); font-size: 15px; color: var(--muted); letter-spacing: .04em; }
+  .h1 { font-size: 46px; font-weight: 700; letter-spacing: -.025em; margin-top: 6px; color: var(--ink); }
+  .h1 em { font-style: normal; color: var(--violet); }
+  .vwin { position: absolute; left: 170px; width: 1580px; top: 196px; margin: 0; }
+  .vwin .cols { height: 820px; grid-template-columns: 230px 1fr 360px; }
+  .vwin .feed { gap: 16px; }
+  .vsteps { position: absolute; left: 170px; width: 1580px; top: 196px; margin: 0; }
+  .pipe { position: absolute; left: 110px; right: 110px; top: 330px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 26px; }
+  .pcard { background: #fff; border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 26px 22px; min-height: 260px; position: relative; }
+  .pcard .n { font-family: var(--mono); color: var(--muted); font-size: 14px; }
+  .pcard h3 { font-size: 23px; margin: 10px 0 8px; letter-spacing: -.01em; }
+  .pcard p { color: var(--ink-2); margin: 0; font-size: 16px; line-height: 1.5; }
+  .pcard .spec { position: absolute; left: 22px; right: 22px; bottom: 20px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+  .pcard.dark { background: var(--pill); color: #fff; border-color: var(--pill); }
+  .pcard.dark p, .pcard.dark .n, .pcard.dark .spec { color: #c9cad0; }
+  .badges { position: absolute; left: 0; right: 0; top: 680px; display: flex; justify-content: center; gap: 16px; }
+  .badges .pill { font-size: 18px; padding: 12px 22px; }
+  .stats { position: absolute; left: 200px; right: 200px; top: 350px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); padding: 30px 26px; }
+  .stat .v { font-size: 56px; font-weight: 700; letter-spacing: -.03em; }
+  .stat .k { color: var(--muted); font-size: 17px; margin-top: 4px; }
+  .closing { position: absolute; left: 0; right: 0; top: 620px; text-align: center; }
+  .closing .t { font-size: 40px; font-weight: 700; letter-spacing: -.02em; }
+  .closing .s { color: var(--muted); font-family: var(--mono); font-size: 16px; margin-top: 14px; }
+  .blocked { margin-top: 6px; }
+  .fade { transition: none; }
+  .feed { scroll-behavior: auto !important; }
+</style>
+</head>
+<body>
+<div id="stage"></div>
+<script src="ui.js"></script>
+<script src="video.js"></script>
+</body>
+</html>

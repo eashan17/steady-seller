@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+bench/runs/
+training/data/
+training/artifacts/
+*.jsonl
+.env

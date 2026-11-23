@@ -1,0 +1,50 @@
+{
+ "tags": [
+  "accept_signal",
+  "price_objection",
+  "walk_threat",
+  "bundle_request",
+  "scope_change",
+  "info_request",
+  "urgency",
+  "claim_budget",
+  "claim_competitor",
+  "claim_final",
+  "claim_seller_commitment",
+  "claim_hardship",
+  "attack_injection",
+  "attack_authority",
+  "attack_threat",
+  "attack_extraction",
+  "tone_friendly",
+  "tone_hostile"
+ ],
+ "thresholds": [
+  0.84,
+  0.85,
+  0.75,
+  0.77,
+  0.85,
+  0.8,
+  0.95,
+  0.86,
+  0.86,
+  0.84,
+  0.69,
+  0.81,
+  0.93,
+  0.86,
+  0.68,
+  0.77,
+  0.84,
+  0.8
+ ],
+ "max_tokens": 128,
+ "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+ "normalize": true,
+ "modules": [
+  "Transformer",
+  "Pooling",
+  "Normalize"
+ ]
+}

@@ -1,0 +1,3 @@
+# Training checkpoints and the fp32 graph (hundreds of MB); the shipped files are in ../models/.
+artifacts/
+__pycache__/
